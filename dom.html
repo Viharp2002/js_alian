@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input onchange="fun()" type="radio" name="val" value="val" id="rad1">
+        <label for="val">Value 1</label>
+        <input onchange="fun()" type="radio" name="val" value="valo" id="rad2">
+        <label for="val">Value 2</label>
+        <input onclick="fun2()" type="reset" value="Reset" id="ww">
+         
+    </form>
+
+    <p id="pqq">I will be changed...Just click any of the above button</p>
+    <script>
+        function fun() {
+              var sc;var rr;
+            if (document.getElementById('rad1').checked) {
+                document.getElementById('pqq').innerHTML = "select 1";
+
+                sc = document.createElement("input");
+                sc.setAttribute("type","radio");
+                sc.id = "rrr";
+                sc.name = "eee";
+        
+                document.body.appendChild(sc);
+                rr = document.createElement("label");
+                rr.setAttribute("for","val");
+                rr.innerText = "value 3";
+                rr.id = "bb";
+                document.body.appendChild(rr);
+ 
+                //suppose: value 4 is there,and if we click on value 1, then value 4 should be disapper and value 3 would be overwritten  
+                let ddu = document.getElementById("rrtr");
+               document.body.removeChild(ddu);
+               let rrrgr = document.getElementById("byb");
+               document.body.removeChild(rrrgr);
+                
+
+            } else if (document.getElementById('rad2').checked) {
+                document.getElementById('pqq').innerHTML = "select 2";
+
+                ssc = document.createElement("input");
+                ssc.setAttribute("type","radio");
+                ssc.id = "rrtr";
+                ssc.name = "eee";
+        
+                document.body.appendChild(ssc);
+                rrt = document.createElement("label");
+                rrt.setAttribute("for","val");
+                rrt.innerText = "value 4";
+                rrt.id = "byb";
+                document.body.appendChild(rrt);
+
+                //suppose: value 3 is there,and if we click on value 2, then value 3 should be disapper and value 4 would be overwritten  
+                
+                let dd = document.getElementById("rrr");
+               document.body.removeChild(dd);
+               let rrrr = document.getElementById("bb");
+               document.body.removeChild(rrrr);
+
+            }
+        }
+        function fun2(){
+            console.log("dddd")
+               document.getElementById('pqq').innerHTML = "I will be changed...Just click any of the above button";
+               let dd = document.getElementById("rrr");
+               document.body.removeChild(dd);
+               let rrrr = document.getElementById("bb");
+               document.body.removeChild(rrrr);
+
+
+               let ddu = document.getElementById("rrtr");
+               document.body.removeChild(ddu);
+               let rrrgr = document.getElementById("byb");
+               document.body.removeChild(rrrgr);
+            }
+    </script>
+</body>
+
+</html>

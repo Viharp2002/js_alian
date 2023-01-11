@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<p id="qq"></p>
+    <script>
+    var input = prompt("Enter whole string: ");
+	const myarray = input.split(" ");
+	xx = myarray[0];
+	yy = myarray[1];
+	zz = myarray[2];
+	ee = myarray[4];
+    var s1;var s2; var s3; var s4;     
+
+	 if(!isNaN(xx))
+	 {
+	 	s1 = parseInt(xx);  
+	 }
+	 else{
+	 	s1 = xx;
+	 }
+	
+	s2 = yy;
+	var eee = s2.charCodeAt(0);
+	 
+     if(!isNaN(zz))
+	 {
+	 	s3 = parseInt(zz);  
+	 }
+	 else{
+	 	s3 = zz;
+	 }
+	
+	 var s4 = parseInt(ee);
+	 
+var ans;
+function fun(){
+    if(s2 == "x"){
+        if((s1+s3) == s4)
+		{
+			return "+";
+		}
+		else if((s1-s3) == s4)
+		{
+			return "-";
+		}
+		else if((s1*s3) == s4)
+		{
+			return "*";
+		}
+		else if((s1 / s3) == s4)
+		{
+			return "/";
+		}
+	}
+	else if(isNaN(s1) == true)
+	{
+		if(s2 == "+")
+		{
+			return (s4-s3);
+		}
+		else if(s2 == "-")
+		{
+			return (s4 + s3);
+		}
+		else if(s2 == "*")
+		{
+			return (s4/s3);
+		}
+		else if(s2 == "/")
+		{
+			return (s4*s3);
+		}
+	}  
+	else if(isNaN(s3) == true)
+	{
+		if(s2 == "+")
+		{
+			return (s4-s1);
+		}
+		else if(s2 == "-")
+		{
+			return (s4 + s1);
+		}
+		else if(s2 == "*")
+		{
+			return (s4/s1);
+		}
+		else if(s2 == "/")
+		{
+			return (s1/s4);
+		}
+	}
+}
+    document.write("value of x: " + fun());
+    </script>
+</body>
+</html>

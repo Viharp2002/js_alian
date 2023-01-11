@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var dateArray = [
+    {
+        name: "a",
+        date: "06/20/2022"
+    }, 
+    {
+        name: "b",
+        date: "05/10/2022"
+    }, 
+    {
+        name: "c",
+        date: "04/21/2022"
+    }, 
+    {
+        name: "d",
+        date: "05/20/2022"
+    }, 
+    {
+        name: "e",
+        date: "05/25/2022"
+    },
+    {
+        name: "f",
+        date: "05/29/2022"
+    },
+    {
+        name: "g",
+        date: "09/25/2022"
+    }];
+
+    var vihar = [];
+    var xx = [];
+    var ob11= [];
+    var ob1= [];
+
+    var count2 = 0;
+    var count = 0;
+     let str = prompt("enter start whole date: ");
+     var arr1 = str.split("/");
+     var arr = new Date(arr1[2],arr1[0]-1,arr1[1]);
+
+    let strr = prompt("enter end whole date: ");
+    var arrc1 = strr.split("/");
+    var arrc = new Date(arrc1[2],arrc1[0]-1,arrc1[1]);
+     
+    for(let i=0;i<dateArray.length;i++)
+    {
+        xx[i] = dateArray[i].date;
+        ob11[i]=xx[i].split("/");
+        ob1[i] = new Date(ob11[i][2],ob11[i][0]-1,ob11[i][1]);
+
+
+        if(arr<=ob1[i] && arrc>=ob1[i])
+       {
+         count = 1;
+         vihar.push(dateArray[i].name);
+       }
+    }
+    
+if(count == 1)
+{
+    console.log(vihar);
+}
+else{
+    console.log("No Data Found");
+}
+    </script>
+</body>
+</html>
